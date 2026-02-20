@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card" aria-label="Hello app">
+      <h1 class="title">Say hello</h1>
+      <p class="subtitle">Enter your name and I’ll greet you.</p>
+
+      <form id="hello-form" class="form" autocomplete="off">
+        <label class="label" for="name">Your name</label>
+        <div class="row">
+          <input
+            id="name"
+            name="name"
+            class="input"
+            type="text"
+            inputmode="text"
+            placeholder="e.g. Ada"
+            maxlength="60"
+            required
+          />
+          <button class="button" type="submit">Say hello</button>
+        </div>
+
+        <p id="greeting" class="greeting" role="status" aria-live="polite"></p>
+
+        <button id="clear" class="link" type="button">Clear</button>
+      </form>
+
+      <footer class="footer">
+        Static frontend served by NGINX.
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
