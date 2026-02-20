@@ -130,3 +130,56 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.popup {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  color: white;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 300px;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.popup-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.popup-success {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.popup-error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.popup-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.popup-message {
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+
+@media (max-width: 520px) {
+  .popup {
+    right: 12px;
+    left: 12px;
+    min-width: auto;
+  }
+}
